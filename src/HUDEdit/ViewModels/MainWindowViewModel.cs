@@ -377,10 +377,13 @@ internal partial class MainWindowViewModel : ViewModelBase
         WindowTitle = Assets.Resources.ui_title;
     }
 
+    [RelayCommand]
     public static void OpenDocSite() => Utilities.OpenWebpage(App.Config.ConfigSettings.AppConfig.DocumentationURL);
 
+    [RelayCommand]
     public static void OpenIssueTracker() => Utilities.OpenWebpage(App.Config.ConfigSettings.AppConfig.IssueTrackerURL);
 
+    [RelayCommand]
     public static void OpenOptionsMenu()
     {
         var settings = new SettingsView();
